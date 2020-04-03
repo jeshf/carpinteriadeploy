@@ -19,8 +19,8 @@ from django.conf.urls import url, include
 from sistema import views
 from rest_framework.routers import DefaultRouter
 from django.contrib.staticfiles.urls import static
-from django.config import settings
-from django.config.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'posts', views.PostViewSet)
