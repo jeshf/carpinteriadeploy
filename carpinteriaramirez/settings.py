@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
-MEDIA_URL='/media/'
+MEDIA_URL='/static/media/'
 WSGI_APPLICATION = 'carpinteriaramirez.wsgi.application'
 LOGIN_URL='/api/login/'
 LOGIN_REDIRECT_URL = '/api/rest/posts/'
@@ -138,7 +138,21 @@ AUTH_USER_MODEL='sistema.CustomUser'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+        },
+    },
+}
 
 
 
