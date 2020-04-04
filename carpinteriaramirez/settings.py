@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p2(ez%2&ryvhki!^4c@x8rgbk8+&3m)zelc4m!@5m(0b@@3^th'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10
@@ -138,21 +138,21 @@ AUTH_USER_MODEL='sistema.CustomUser'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
-        },
-    },
-}
+#LOGGING = {
+ #   'version': 1,
+  #  'disable_existing_loggers': False,
+   # 'handlers': {
+    #    'console': {
+     #       'class': 'logging.StreamHandler',
+      #  },
+    #},
+    #'loggers': {
+     #   'django': {
+      #      'handlers': ['console'],
+       #     'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+       # },
+    #},
+#}
 
 
 
