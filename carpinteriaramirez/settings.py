@@ -67,7 +67,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
            #otra ruta o la cantidad que desee'/',
-            '/home/jesus/django-projects-environments/carpinteriaramirez/templates',
        ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -87,7 +86,7 @@ MEDIA_URL='/media/'
 WSGI_APPLICATION = 'carpinteriaramirez.wsgi.application'
 LOGIN_URL='/api/login/'
 LOGIN_REDIRECT_URL = '/api/rest/posts/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_URL = '/static/'
